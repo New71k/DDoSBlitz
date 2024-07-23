@@ -24,6 +24,7 @@ void banner() {
     printf("                                                                           \n");
     printf("                          DDoSBlitz\n");
     printf("                           By - New71k\n");
+    printf("\033[41m\033[1;37m  Distributed Denial of Service - C Tools  \033[0m\n");
     printf("\033[1;33mAuthor   : \033[1;37mNew71k\033[0m\n");
     printf("\033[1;32mPress CTRL+C to stop sending\033[1;37m\n");
     printf("------------\n");
@@ -31,6 +32,9 @@ void banner() {
     printf("    \033[1;32m./DDoSBlitz <target> <port>\033[0m\n");
     printf("Example:\n");
     printf("    \033[1;32m./DDoSBlitz www.example.com 80\033[0m\n");
+    usleep(3000000);
+    system("clear");
+}
 
 int make_socket(char *host, char *port) {
     struct addrinfo hints, *servinfo, *p;
@@ -117,4 +121,3 @@ int main(int argc, char **argv) {
     }
     return 0;
 }
-/* Credits: New71k */
