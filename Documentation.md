@@ -49,7 +49,7 @@ While Termux runs on a mobile device, it does not have the same power as a full 
    Navigate to the DDoSBlitz directory and compile the source code:
 
    ```bash
-   cd ddos
+   cd DDoSBlitz
    clang DDoSBlitz.c -o DDoSBlitz
    ```
 
@@ -60,6 +60,16 @@ While Termux runs on a mobile device, it does not have the same power as a full 
    ```bash
    ./DDoSBlitz www.example.com 80
    ```
+## All Commands
+
+```bash
+apt update && apt upgrade -y
+pkg install git clang -y
+git clone https://github.com/New71k/DDos/blob/main/DDoSBlitz.c
+cd DDoSBlitz
+clang DDoSBlitz.c -o DDoSBlitz
+./DDoSBlitz www.example.com 80
+```
 
 ## Disclaimer
 
