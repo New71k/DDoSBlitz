@@ -63,7 +63,7 @@ While Termux runs on a mobile device, it does not have the same power as a full 
 
 ## Disclaimer
 
-This tool is intended solely for educational purposes. Unauthorized use of Xerxes or similar tools to attack servers or services without explicit permission is illegal and unethical. Always ensure you have proper authorization before conducting any tests.
+This tool is intended solely for educational purposes. Unauthorized use of DDoSBlitz or similar tools to attack servers or services without explicit permission is illegal and unethical. Always ensure you have proper authorization before conducting any tests.
 
 ## License
 
