@@ -72,7 +72,3 @@ This code is licensed under the MIT License. See the [LICENSE](LICENSE) file for
 ## Credits
 
 - **Author**: New71k
-
----
-
-Feel free to modify any sections to better fit your needs or to reflect additional details about your project.
