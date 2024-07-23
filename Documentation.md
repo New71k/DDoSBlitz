@@ -41,7 +41,7 @@ While Termux runs on a mobile device, it does not have the same power as a full 
    Download the DDoSBlitz source code from GitHub:
 
    ```bash
-   git clone 
+   git clone https://github.com/New71k/DDos/blob/main/DDoSBlitz.c
    ```
 
 5. **Compile the DDoSBlitz Tool**
