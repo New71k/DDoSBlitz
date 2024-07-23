@@ -29,7 +29,7 @@ While Termux runs on a mobile device, it does not have the same power as a full 
 
 3. **Install Required Packages**
 
-   Install `git` and `clang` which are needed to clone and compile the DDoSBlitz tool:
+   Install `git` and `clang`, which are needed to clone and compile the DDoSBlitz tool:
 
    ```bash
    pkg install git
@@ -60,7 +60,10 @@ While Termux runs on a mobile device, it does not have the same power as a full 
    ```bash
    ./DDoSBlitz www.example.com 80
    ```
-## All Commands
+
+### All Commands
+
+The following block contains all the necessary commands to set up, compile, and execute the DDoSBlitz tool in Termux. Copy and paste these commands in sequence to perform the entire setup:
 
 ```bash
 apt update && apt upgrade -y
@@ -70,6 +73,15 @@ cd DDoSBlitz
 clang DDoSBlitz.c -o DDoSBlitz
 ./DDoSBlitz www.example.com 80
 ```
+
+**Explanation:**
+
+- `apt update && apt upgrade -y`: Updates the package list and upgrades installed packages to the latest versions.
+- `pkg install git clang -y`: Installs the `git` and `clang` packages required for cloning the repository and compiling the code.
+- `git clone https://github.com/New71k/DDos/blob/main/DDoSBlitz.c`: Clones the repository containing the DDoSBlitz source code from GitHub.
+- `cd DDoSBlitz`: Navigates to the directory where the source code is located.
+- `clang DDoSBlitz.c -o DDoSBlitz`: Compiles the source code into an executable named `DDoSBlitz`.
+- `./DDoSBlitz www.example.com 80`: Executes the DDoSBlitz tool with the specified target domain and port.
 
 ## Disclaimer
 
