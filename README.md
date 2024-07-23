@@ -73,7 +73,7 @@ apt update && apt upgrade -y && pkg install git && pkg install clang -y && git c
 
 - `apt update && apt upgrade -y`: Updates the package list and upgrades installed packages to the latest versions.
 - `pkg install git clang -y`: Installs the `git` and `clang` packages required for cloning the repository and compiling the code.
-- `git clone https://github.com/New71k/DDos/blob/main/DDoSBlitz.c`: Clones the repository containing the DDoSBlitz source code from GitHub.
+- `git clone https://github.com/New71k/DDoSBlitz`: Clones the repository containing the DDoSBlitz source code from GitHub.
 - `cd DDoSBlitz`: Navigates to the directory where the source code is located.
 - `clang DDoSBlitz.c -o DDoSBlitz`: Compiles the source code into an executable named `DDoSBlitz`.
 - `./DDoSBlitz www.example.com 80`: Executes the DDoSBlitz tool with the specified target domain and port.
