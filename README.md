@@ -32,8 +32,8 @@ While Termux runs on a mobile device, it does not have the same power as a full 
    Install `git` and `clang`, which are needed to clone and compile the DDoSBlitz tool:
 
    ```bash
-   pkg install git
-   pkg install clang
+   pkg install git -y
+   pkg install clang -y
    ```
 
 4. **Clone the DDoSBlitz Repository**
